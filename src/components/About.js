@@ -62,8 +62,7 @@ export default function About() {
       <div css={divider} />
       <p css={subheading}>
         Hi, I’m Mic! I’m a product engineer with over five years of experience
-        in web development and product design. Keep scrolling to find out more
-        about my work!
+        in web development and product design. More about my work coming soon!
       </p>
     </div>
   );
