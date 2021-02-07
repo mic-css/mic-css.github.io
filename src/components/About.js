@@ -45,25 +45,67 @@ const divider = css`
   animation: ${animateWidth} 0.5s ease-in-out 0.5s forwards;
 `;
 
-const subheading = css`
+const about = css`
   opacity: 0;
+  animation: ${fadeUp} 0.5s ease-out 1s forwards;
   font-size: 1.25rem;
   line-height: 2rem;
-  animation: ${fadeUp} 0.5s ease-out 1s forwards;
   @media (min-width: 420px) {
     font-size: 1.5rem;
   }
 `;
 
+const details = css`
+  font-size: 0.8em;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+  & p {
+    padding: 0.4rem 0.8rem;
+  }
+`;
+
+const summary = css`
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+`;
+
+const detailsContent = css`
+  padding: 0.4rem 0.8rem;
+  margin: 0;
+`;
+
 export default function About() {
   return (
     <div css={container}>
-      <h1 css={heading}>Web developer & product engineer.</h1>
+      <h1 css={heading}>Product. Engineer.</h1>
       <div css={divider} />
-      <p css={subheading}>
-        Hi, I’m Mic! I’m a product engineer with over five years of experience
-        in web development and product design. More about my work coming soon!
-      </p>
+      <div css={about}>
+        <p>
+          Hi, I’m Mic! I’m a software engineer with a background in business
+          management and computer science and over five years of experience
+          developing digital products.
+        </p>
+
+        <details css={details}>
+          <summary css={summary}>What's a product engineer?</summary>
+          <p css={detailsContent}>
+            A product engineer is a software engineer with a strong interest and
+            understanding in product development. They marry full-stack
+            technical skills with product management, strategy and design.
+            <br /> This excellent{" "}
+            <a
+              href="https://blog.pragmaticengineer.com/the-product-minded-engineer/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              blog post
+            </a>{" "}
+            explains it in detail.
+          </p>
+        </details>
+
+        <p>More about my work coming soon!</p>
+      </div>
     </div>
   );
 }

@@ -19,18 +19,22 @@ const container = css`
 const navLink = css`
   color: black;
   font-weight: 500;
-  margin-left: 2rem;
+  margin-left: 1rem;
   display: inline-block;
   transition: transform 0.1s ease-in-out;
   a {
     color: black;
   }
-  :hover {
+  :hover,
+  :focus {
     transform: translateY(-2px);
     transition: transform 0.1s ease-in-out;
     a {
       color: dodgerblue;
     }
+  }
+  @media (min-width: 420px) {
+    margin-left: 2rem;
   }
 `;
 
@@ -41,13 +45,27 @@ export default function Header() {
 
       <nav>
         <div css={navLink}>
-          <a href="https://github.com/mic-css">GitHub</a>
+          <a href="https://github.com/mic-css" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
         </div>
         <div css={navLink}>
-          <a href="https://www.linkedin.com/in/mic-cassano">LinkedIn</a>
+          <a
+            href="https://www.linkedin.com/in/mic-cassano"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
         <div css={navLink}>
-          <a href="https://twitter.com/mic_css">Twitter</a>
+          <a
+            href="https://twitter.com/mic_css"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>
         </div>
       </nav>
     </header>
