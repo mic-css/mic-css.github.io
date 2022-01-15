@@ -3,10 +3,10 @@ import { css, keyframes } from "@emotion/react"
 
 const container = css`
   padding: 1.2rem;
-  margin: 4rem 0 8rem;
+  margin: 4rem 0 6rem;
   @media (min-width: 420px) {
     width: 58rem;
-    margin: 12rem auto 16rem;
+    margin: 12rem auto 14rem;
     padding: 0;
   }
 `
