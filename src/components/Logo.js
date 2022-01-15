@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import logo from "../micmoji.png";
+import logo from "../assets/micmoji.png";
 
 const wrapper = css`
   width: 4rem;
