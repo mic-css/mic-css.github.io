@@ -4,12 +4,14 @@ import laptop from "../assets/laptop.jpg"
 
 const container = css`
   width: 100%;
-  height: 30rem;
+  height: 35rem;
+  position: relative;
   background: url(${laptop}) no-repeat center center;
   background-size: cover;
   background-blend-mode: darken;
   background-color: #0007;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -18,24 +20,69 @@ const container = css`
   }
 `
 
+const textContainer = css`
+  width: 80%;
+
+  @media (min-width: 420px) {
+    width: 60%;
+  }
+`
+
 const text = css`
   color: white;
   font-size: 1.8em;
   font-weight: bold;
-  width: 80%;
 
   @media (min-width: 420px) {
     font-size: 4.25em;
-    width: 60%;
+  }
+`
+
+const quoteAttribution = css`
+  color: gainsboro;
+  font-size: 0.9em;
+
+  @media (min-width: 420px) {
+    font-size: 1em;
+  }
+`
+
+const imageAttribution = css`
+  font-size: 0.1em;
+  color: gainsboro;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1em 2em;
+
+  a {
+    color: gainsboro;
+  }
+
+  @media (min-width: 420px) {
+    font-size: 0.5em;
   }
 `
 
 export default function Quote() {
   return (
     <div css={container}>
-      <p css={text}>
-        A program is a building of thought. It is costless to build, it is
-        weightless, and it grows easily under our typing hands.
+      <div css={textContainer}>
+        <p css={text}>
+          A program is a building of thought. It is costless to build, it is
+          weightless, and it grows easily under our typing hands.
+        </p>
+
+        <p css={quoteAttribution}>
+          &#8211; Marijn Haverbeke, <em>Eloquent JavaScript</em>
+        </p>
+      </div>
+
+      <p css={imageAttribution}>
+        Photo by{" "}
+        <a href="https://unsplash.com/@joshuaryanphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+          Joshua Reddekopp
+        </a>
       </p>
     </div>
   )

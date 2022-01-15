@@ -63,9 +63,10 @@ export default function About() {
       <div css={about}>
         <p>
           Hi, I&#x2019;m Mic! I&#x2019;m a product-focused software engineer
-          with over five years of experience developing digital products. More
-          details about my work coming soon.
+          with over five years of experience developing digital products.
         </p>
+
+        <p>More details about my work coming soon.</p>
       </div>
     </div>
   )
