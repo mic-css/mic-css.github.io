@@ -23,10 +23,19 @@ const fadeUp = keyframes`
 const heading = css`
   opacity: 0;
   font-size: 2.6rem;
-  animation: ${fadeUp} 0.5s ease-in 0s forwards;
   @media (min-width: 420px) {
     font-size: 4.2rem;
   }
+  :first-of-type {
+    animation: ${fadeUp} 0.5s ease-in 0s forwards;
+  }
+  :nth-of-type(2) {
+    animation: ${fadeUp} 0.5s ease-in 0.5s forwards;
+  }
+`
+
+const headingContainer = css`
+  display: flex;
 `
 
 const animateWidth = keyframes`
@@ -42,12 +51,12 @@ const divider = css`
   width: 0px;
   background-color: gainsboro;
   border-radius: 1.5px;
-  animation: ${animateWidth} 0.5s ease-in-out 0.5s forwards;
+  animation: ${animateWidth} 0.5s ease-in-out 1s forwards;
 `
 
 const about = css`
   opacity: 0;
-  animation: ${fadeUp} 0.5s ease-out 1s forwards;
+  animation: ${fadeUp} 0.5s ease-out 1.5s forwards;
   font-size: 1.25rem;
   line-height: 2rem;
   @media (min-width: 420px) {
@@ -58,7 +67,10 @@ const about = css`
 export default function About() {
   return (
     <div css={container}>
-      <h1 css={heading}>Product. Engineer.</h1>
+      <div css={headingContainer}>
+        <h1 css={heading}>Product&nbsp;</h1>
+        <h1 css={heading}>Engineer</h1>
+      </div>
       <div css={divider} />
       <div css={about}>
         <p>
