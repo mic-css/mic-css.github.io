@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react"
 import { useEffect } from "react"
+import { ReactComponent as ExternalLinkIcon } from "../assets/external-link.svg"
 
 const container = css`
   position: relative;
@@ -75,6 +76,12 @@ const shopifyLink = css`
   color: #008060;
 `
 
+const externalLinkIcon = css`
+  height: 0.8em;
+  color: darkgrey;
+  stroke-width: 2;
+`
+
 const code = css`
   display: none;
   @media (min-width: 420px) {
@@ -116,8 +123,9 @@ export default function About() {
             Hi, I&#x2019;m Mic! I&#x2019;m a product-focused software engineer
             with over five years of experience developing digital products. I
             work at{" "}
-            <a css={shopifyLink} href="shopify.com">
+            <a css={shopifyLink} href="https://shopify.com" target="blank">
               Shopify
+              <ExternalLinkIcon css={externalLinkIcon} />
             </a>{" "}
             making commerce better for everyone.
           </p>
