@@ -63,7 +63,8 @@ export default function About() {
       <div css={about}>
         <p>
           Hi, I&#x2019;m Mic! I&#x2019;m a product-focused software engineer
-          with over five years of experience developing digital products.
+          with over five years of experience developing digital products. I
+          currently work at Shopify to make commerce better for everyone.
         </p>
 
         <p>More details about my work coming soon.</p>
