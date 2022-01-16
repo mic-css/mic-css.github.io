@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import Logo from "./Logo";
+import { css } from "@emotion/react"
+import Logo from "./Logo"
 
 const container = css`
   padding: 1.2rem;
@@ -9,12 +9,12 @@ const container = css`
   align-items: center;
   justify-content: space-between;
 
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     margin: 2rem auto;
     padding: 0;
-    width: 58rem;
+    max-width: 58rem;
   }
-`;
+`
 
 const navLink = css`
   color: black;
@@ -33,10 +33,10 @@ const navLink = css`
       color: dodgerblue;
     }
   }
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     margin-left: 2rem;
   }
-`;
+`
 
 export default function Header() {
   return (
@@ -69,5 +69,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  );
+  )
 }

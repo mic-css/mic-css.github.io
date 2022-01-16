@@ -13,7 +13,7 @@ const container = css`
 
 const content = css`
   padding: 4rem 1.2rem 6rem;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     width: 58rem;
     padding: 8rem 0 14rem;
   }
@@ -31,7 +31,7 @@ const fadeUp = keyframes`
 const heading = css`
   opacity: 0;
   font-size: 2.6rem;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     font-size: 4.2rem;
   }
   :first-of-type {
@@ -67,7 +67,7 @@ const about = css`
   animation: ${fadeUp} 0.5s ease-out 1.5s forwards;
   font-size: 1.25rem;
   line-height: 2rem;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     font-size: 1.5rem;
   }
 `
@@ -84,7 +84,7 @@ const externalLinkIcon = css`
 
 const code = css`
   display: none;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     display: block;
     position: absolute;
     right: -15%;
@@ -141,7 +141,7 @@ const codeMarkup = `
 const container = css\`
   padding: 1.2rem;
   margin: 4rem 0 6rem;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     width: 58rem;
     margin: 12rem auto 14rem;
     padding: 0;
@@ -162,7 +162,7 @@ const heading = css\`
   opacity: 0;
   font-size: 2.6rem;
   animation: \${fadeUp} 0.5s ease-in 0s forwards;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     font-size: 4.2rem;
   }
 \`
@@ -188,7 +188,7 @@ const about = css\`
   animation: \${fadeUp} 0.5s ease-out 1s forwards;
   font-size: 1.25rem;
   line-height: 2rem;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     font-size: 1.5rem;
   }
 \`
